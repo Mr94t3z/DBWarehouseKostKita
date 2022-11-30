@@ -1,1 +1,3 @@
+# ignore this file extension
 *.pyc
+*.csv
