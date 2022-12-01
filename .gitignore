@@ -5,3 +5,5 @@
 # ignore this folder
 __pycache__/
 config/_db.ini
+models/__pycache__/
+data/
