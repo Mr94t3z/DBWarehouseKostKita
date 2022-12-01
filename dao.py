@@ -8,7 +8,7 @@ def getSourceConnetion():
 
     # database configuration
     config = cfg.ConfigParser()
-    config.readfp(open(r'config.ini'))
+    config.readfp(open(r'./config/_db.ini'))
     DB_HOST = config.get('DBWarehouse', 'DB_HOST')
     DB_USER = config.get('DBWarehouse', 'DB_USER')
     DB_PASS = config.get('DBWarehouse', 'DB_PASS')

@@ -1,3 +1,7 @@
 # ignore this file extension
 *.pyc
 *.csv
+
+# ignore this folder
+__pycache__/
+config/_db.ini

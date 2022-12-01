@@ -1,4 +1,5 @@
 import dao
+import os
 import pandas as pd
 
 # table name target
@@ -29,9 +30,12 @@ def frecthRecords(tableName):
         KostKitaList.append([elem for elem in row])  # elem = x**2
         print([elem for elem in row])
 
+    # path to save file
+    path = f'./export/'
+
     # create dataframe
     pd.DataFrame(KostKitaList).iloc[:, :].to_csv(
-        f'{tableName}.csv', index=False)
+        os.path.join(path, f'{tableName}.csv'), index=False)
 
     # close cursor
     cursor.close()
@@ -42,5 +46,5 @@ def frecthRecords(tableName):
 
 # loop through table list
 for tableName in targetTables:
-    frecthRecords(tableName)
     print(tableName)
+    frecthRecords(tableName)
