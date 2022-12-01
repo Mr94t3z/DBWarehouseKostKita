@@ -17,9 +17,14 @@ def insertIntoOrders(tableName):
 
     # loop through each row
     for i, row in df.iterrows():
-        sqlQuery = "INSERT INTO `ORDERS`(`orderID`, `employeeID`, `customerID`, `objectID`, `startAt`, `endAt`) VALUES (" + \
-            "%s,"*(len(row)-1) + "%s)"
-        cursor.execute(sqlQuery, tuple(row))
+
+        try:
+            sqlQuery = "INSERT INTO `ORDERS`(`orderID`, `employeeID`, `customerID`, `objectID`, `startAt`, `endAt`) VALUES (" + \
+                "%s,"*(len(row)-1) + "%s)"
+            cursor.execute(sqlQuery, tuple(row))
+
+        except Exception as e:
+            print(e)
 
     cnxn.commit()
     cursor.close()

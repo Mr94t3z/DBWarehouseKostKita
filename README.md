@@ -21,5 +21,10 @@
 # Implementasi {INSERT INTO TABLE}
 
 # Flow {EXPORT}
+![Flow](https://img.shields.io/badge/Flow-DBWarehouse%20Kost%20Kita-blueviolet)
+
+
+![Flow_Assets](assets/flow/flow-kostkita.png)
+
 
 # Presentation
